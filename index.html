@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Room Design</title>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <a-asset-item id="TableMTL" src="./Assets/Table/obj.mtl"></a-asset-item>
+                <a-asset-item id="TableGLB" src="./Assets/Table/Table.glb"></a-asset-item>
+                <a-asset-item id="TableOBJ" src="./Assets/Table/tinker.obj"></a-asset-item>
+                <a-asset-item id="BedMTL" src="./Assets/Bed/obj.mtl"></a-asset-item>
+                <a-asset-item id="BedGLB" src="./Assets/Bed/Bed.glb"></a-asset-item>
+                <a-asset-item id="BedOBJ" src="./Assets/Bed/tinker.obj"></a-asset-item>
+                <a-asset-item id="BedSideTableMTL" src="./Assets/BedSideTable/obj.mtl"></a-asset-item>
+                <a-asset-item id="BedSideTableOBJ" src="./Assets/BedSideTable/tinker.obj"></a-asset-item>
+            </a-assets>
+            <a-camera position="0 5 20" camera look-controls wasd-controls="acceleration:500; fly:true;"></a-camera>
+            <a-circle id="floor" side="double" position="0 -25 -20" rotation="90 0 0" radius="100" shadow="recieve:true" visible="true" color="lightblue"></a-circle>
+            <a-entity> 
+                <a-box position="0 0 -5" height="50" width="50" color="blue"></a-box>
+            </a-entity>
+            <a-entity> 
+                <a-box position="25 0 20" height="50" width="50" color="lightgreen" rotation="0 -90 0"></a-box>
+            </a-entity>
+            <a-entity> 
+                <a-box position="-25 0 20" height="50" width="50" color="lightgreen" rotation="0 -90 0"></a-box>
+            </a-entity>
+            <a-entity> 
+                <a-box position="0 25 20" height="50" width="50" color="yellow" rotation="90 -90 0"></a-box>
+            </a-entity>
+            <a-entity> 
+                <a-box position="0 -25 20" height="50" width="50" color="yellow" rotation="90 -90 0"></a-box>
+            </a-entity>
+            <a-entity obj-model="obj:#TableOBJ; mtl:#TableMTL" scale="0.25 0.25 0.25" position="19.5 -25 20" rotation="-90 90 "></a-entity>
+            <a-entity obj-model="obj:#BedOBJ; mtl:#BedMTL" scale="0.25 0.25 0.25" position="-16.5 -25 13" rotation="-90 0 0"></a-entity>
+            <a-entity obj-model="obj:#BedSideTableOBJ; mtl:#BedSideTableMTL" scale="0.15 0.15 0.15" position="0.25 -24.75 0" rotation="-90 0 0"></a-entity>
+        </a-scene>
+    </body>
+</html>
